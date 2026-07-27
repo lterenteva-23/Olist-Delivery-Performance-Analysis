@@ -39,7 +39,7 @@
 
 Используется открытый набор [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
-CSV-файлы не включены в репозиторий. После загрузки поместите необходимые таблицы в каталог `dataset olist/`.
+CSV-файлы не включены в репозиторий. После загрузки поместите необходимые таблицы в папку`dataset olist/`.
 
 ## Используемые технологии
 
