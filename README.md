@@ -23,18 +23,6 @@
 
 Выводы описывают связи в имеющихся данных и не должны интерпретироваться как доказательство причинно-следственных зависимостей.
 
-## Структура репозитория
-
-```text
-.
-├── project_olist.ipynb       # анализ, визуализации и выводы
-├── README.md                 # описание проекта
-├── requirements.txt          # зависимости Python
-├── .gitignore                # исключения для Git
-└── dataset olist/
-    └── README.md             # инструкция по подготовке исходных данных
-```
-
 ## Данные
 
 Используется открытый набор [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
