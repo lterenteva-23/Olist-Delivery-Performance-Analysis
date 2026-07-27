@@ -41,29 +41,6 @@
 
 CSV-файлы не включены в репозиторий. После загрузки поместите необходимые таблицы в каталог `dataset olist/`. Точный список файлов приведён в [`dataset olist/README.md`](dataset%20olist/README.md).
 
-## Локальный запуск
-
-Требуется Python 3.10 или новее.
-
-```bash
-git clone <URL-ВАШЕГО-РЕПОЗИТОРИЯ>
-cd olist-delivery-analysis
-
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-jupyter lab
-```
-
-В Windows активация окружения выполняется командой:
-
-```powershell
-.venv\Scripts\activate
-```
-
-После запуска Jupyter откройте `project_olist.ipynb` и выполните **Run All**.
-
 ## Используемые технологии
 
 - Python
