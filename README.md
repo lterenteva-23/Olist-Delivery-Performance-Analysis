@@ -1,22 +1,73 @@
-# Исходные данные
+# Анализ своевременности доставки заказов Olist
 
-Загрузите [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) и поместите в этот каталог следующие файлы:
+Проект исследует сроки доставки заказов бразильского маркетплейса Olist, факторы опозданий и связь задержек с оценками покупателей.
 
-- `olist_orders_dataset.csv`
-- `olist_order_items_dataset.csv`
-- `olist_customers_dataset.csv`
-- `olist_sellers_dataset.csv`
-- `olist_order_reviews_dataset.csv`
+Основной результат представлен в ноутбуке [`project_olist.ipynb`](project_olist.ipynb). Все вычисленные таблицы и графики сохранены, поэтому исследование можно просмотреть прямо на GitHub без локального запуска.
 
-Итоговая структура должна выглядеть так:
+## Цель исследования
+
+- определить долю заказов, доставленных позже обещанного срока;
+- оценить типичную продолжительность задержек;
+- проверить связь опозданий с оценками покупателей;
+- сравнить показатели по штатам, количеству товаров и продавцов;
+- изучить изменение частоты и продолжительности опозданий во времени.
+
+## Основные результаты
+
+- 6,77% доставленных заказов пришли позже плановой даты;
+- медианная задержка опоздавшего заказа составила 7 дней;
+- средняя оценка снизилась с 4,29 у заказов без опоздания до 2,27 у опоздавших;
+- среди штатов с достаточным количеством наблюдений наиболее высокая доля опозданий отмечена в AL, MA и SE;
+- максимальная месячная доля опозданий зафиксирована в марте 2018 года — 18,96%;
+- статистически значимая связь между месячной долей опозданий и их средней продолжительностью не обнаружена.
+
+Выводы описывают связи в имеющихся данных и не должны интерпретироваться как доказательство причинно-следственных зависимостей.
+
+## Структура репозитория
 
 ```text
-dataset olist/
-├── olist_orders_dataset.csv
-├── olist_order_items_dataset.csv
-├── olist_customers_dataset.csv
-├── olist_sellers_dataset.csv
-└── olist_order_reviews_dataset.csv
+.
+├── project_olist.ipynb       # анализ, визуализации и выводы
+├── README.md                 # описание проекта
+├── requirements.txt          # зависимости Python
+├── .gitignore                # исключения для Git
+└── dataset olist/
+    └── README.md             # инструкция по подготовке исходных данных
 ```
 
-Остальные таблицы исходного набора для текущего анализа не требуются.
+## Данные
+
+Используется открытый набор [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
+CSV-файлы не включены в репозиторий. После загрузки поместите необходимые таблицы в каталог `dataset olist/`. Точный список файлов приведён в [`dataset olist/README.md`](dataset%20olist/README.md).
+
+## Локальный запуск
+
+Требуется Python 3.10 или новее.
+
+```bash
+git clone <URL-ВАШЕГО-РЕПОЗИТОРИЯ>
+cd olist-delivery-analysis
+
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+jupyter lab
+```
+
+В Windows активация окружения выполняется командой:
+
+```powershell
+.venv\Scripts\activate
+```
+
+После запуска Jupyter откройте `project_olist.ipynb` и выполните **Run All**.
+
+## Используемые технологии
+
+- Python
+- pandas и NumPy
+- Matplotlib и Seaborn
+- SciPy
+- Jupyter Notebook
